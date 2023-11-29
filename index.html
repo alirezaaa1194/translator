@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Translator</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="icon" href="https://icons.iconarchive.com/icons/marcus-roberto/google-play/512/Google-Translate-icon.png" sizes="32x32">
+  </head>
+  <body>
+
+    <audio src=""></audio>
+    <div class="container">
+      <div class="wrapper">
+        <div class="text-input">
+          <textarea
+            spellcheck="false"
+            class="from-text"
+            placeholder="لطفا متن را وارد کنید"
+          ></textarea>
+          <textarea
+            spellcheck="false"
+            readonly
+            disabled
+            class="to-text"
+            placeholder="ترجمه"
+          ></textarea>
+        </div>
+        <ul class="controls">
+          <li class="row from">
+            <div class="icons">
+              <i id="from" class="fas fa-volume-up fromVoice"></i>
+              <i id="from" class="fas fa-copy fromCopy"></i>
+            </div>
+            <select class="from-select"></select>
+          </li>
+          <li class="exchange"><i class="fas fa-exchange-alt"></i></li>
+          <li class="row to">
+            <select class="to-select"></select>
+            <div class="icons">
+              <i id="to" class="fas fa-volume-up toVoice"></i>
+              <i id="to" class="fas fa-copy toCopy"></i>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <button class="translateBtn">Translate Text</button>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
+
+
+<!-- https://api.mymemory.translated.net/get?q=${text}&langpair=${translateFrom}|${translateTo} -->
