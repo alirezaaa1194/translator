@@ -4,15 +4,18 @@
     <meta charset="utf-8" />
     <title>Translator</title>
     <link rel="stylesheet" href="style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-    <link rel="icon" href="https://icons.iconarchive.com/icons/marcus-roberto/google-play/512/Google-Translate-icon.png" sizes="32x32">
+    <link
+      rel="icon"
+      href="https://icons.iconarchive.com/icons/marcus-roberto/google-play/512/Google-Translate-icon.png"
+      sizes="32x32"
+    />
   </head>
   <body>
-
     <audio src=""></audio>
     <div class="container">
       <div class="wrapper">
@@ -32,15 +35,15 @@
         </div>
         <ul class="controls">
           <li class="row from">
+              <select class="from-select"></select>
             <div class="icons">
               <i id="from" class="fas fa-volume-up fromVoice"></i>
               <i id="from" class="fas fa-copy fromCopy"></i>
             </div>
-            <select class="from-select"></select>
           </li>
           <li class="exchange"><i class="fas fa-exchange-alt"></i></li>
           <li class="row to">
-            <select class="to-select"></select>
+              <select class="to-select"></select>
             <div class="icons">
               <i id="to" class="fas fa-volume-up toVoice"></i>
               <i id="to" class="fas fa-copy toCopy"></i>
@@ -48,12 +51,11 @@
           </li>
         </ul>
       </div>
-      <button class="translateBtn">Translate Text</button>
+      <button class="translateBtn">ترجمه متن</button>
     </div>
 
     <script src="./app.js"></script>
   </body>
 </html>
-
 
 <!-- https://api.mymemory.translated.net/get?q=${text}&langpair=${translateFrom}|${translateTo} -->
